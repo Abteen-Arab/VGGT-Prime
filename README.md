@@ -36,7 +36,7 @@ CD is the only reconstruction-quality metric in the result tables. The saliency-
 
 ## Release links
 
-Paper and Code are intentionally disabled and labeled **Coming soon**. When release URLs are available, replace each disabled resource `<button>` with an `<a>` using the same classes and a verified `href`; remove `disabled`, `aria-disabled`, and the Coming soon status. No paper ID, venue, publication date, author homepage, or canonical project URL has been invented.
+Paper is intentionally disabled and labeled **Coming soon**. The Code button is omitted. When the paper URL is available, replace the disabled resource `<button>` with an `<a>` using the same classes and a verified `href`; remove `disabled`, `aria-disabled`, and the Coming soon status. No paper ID, venue, publication date, author homepage, or canonical project URL has been invented.
 
 ## Attribution
 
