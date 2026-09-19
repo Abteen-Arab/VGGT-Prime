@@ -2,18 +2,6 @@
 
 Local project page for **VGGT-Prime: Compute-Adaptive Mixture-of-Heads for Efficient Visual Geometry Transformers** by Abteen Arab, Guile Wu, Chengjie Huang, and Dongfeng Bai.
 
-## Preview
-
-Open `index.html` directly, or run this command from this folder:
-
-```sh
-python3 -m http.server 8000 --bind 127.0.0.1
-```
-
-Then visit <http://127.0.0.1:8000>. No installation or build step is needed. The page is static HTML and CSS, with local Bulma styles and optional Google Fonts. All figures and tables work without JavaScript or external services.
-
-This folder is ready for GitHub Pages; `.nojekyll` is retained and all local asset URLs are relative. Nothing has been published.
-
 ## Content and sources
 
 The supplied `VGGT_Prime_arxiv__Execute_` manuscript is the source of the authors, affiliations, abstract, figures, and results.
@@ -33,10 +21,6 @@ The supplied `VGGT_Prime_arxiv__Execute_` manuscript is the source of the author
 Benchmark data comes from `Table/Point_Cloud_all.tex`; backbone data comes from `Table/Generalization.tex`. Speedups in the HTML tables are ratios of reported runtimes, rounded to two decimals. The scaling figure's annotated speedups retain their original one-decimal precision. The abstract preserves its original rounded “up to 14×” statement; the scaling section reports 13.8×.
 
 CD is the only reconstruction-quality metric in the result tables. The saliency-analysis figure includes its original pose-performance ablation. The teaser's backbone plot is ScanNet-500, while the backbone table is sparse 7-Scenes.
-
-## Release links
-
-Paper is intentionally disabled and labeled **Coming soon**. The Code button is omitted. When the paper URL is available, replace the disabled resource `<button>` with an `<a>` using the same classes and a verified `href`; remove `disabled`, `aria-disabled`, and the Coming soon status. No paper ID, venue, publication date, author homepage, or canonical project URL has been invented.
 
 ## Attribution
 
