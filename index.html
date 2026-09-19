@@ -29,7 +29,7 @@
   <a class="skip-link" href="#main-content">Skip to content</a>
   <header class="hero publication-header">
     <div class="hero-body">
-      <div class="container header-container has-text-centered">
+      <div class="container is-max-desktop content-container has-text-centered">
         <h1 class="publication-title">VGGT-<span>Prime</span></h1>
         <p class="publication-subtitle">Compute-Adaptive Mixture-of-Heads<br class="desktop-break"> for Efficient Visual Geometry Transformers</p>
         <p class="publication-authors">
@@ -55,7 +55,7 @@
   </header>
   <main id="main-content">
     <section class="section teaser-section" aria-label="VGGT-Prime overview">
-      <div class="container page-container">
+      <div class="container is-max-desktop content-container">
         <figure class="paper-figure main-figure">
           <a class="figure-link" href="static/images/main-figure.png" target="_blank" rel="noopener" aria-label="Open the overview figure at full resolution in a new tab">
             <img src="static/images/main-figure.png" width="3818" height="1720" fetchpriority="high" alt="VGGT-Prime reconstructs a resampled 1,000-image Mount Rushmore sequence in 45.2 seconds. Charts compare ScanNet-500 Chamfer Distance versus runtime and inference scaling from 100 to 1,000 frames.">
@@ -65,7 +65,7 @@
       </div>
     </section>
     <section class="section" id="abstract" aria-labelledby="abstract-title">
-      <div class="container prose-container">
+      <div class="container is-max-desktop content-container">
         <h2 class="section-title" id="abstract-title">Abstract</h2>
         <div class="abstract-text">
           <p>Feed-forward visual geometry models such as the Visual Geometry Grounded Transformer (VGGT) have recently enabled direct 3D reconstruction from multi-view images. Despite their promising performance, these models scale quadratically with the number of input views due to their global attention mechanism, resulting in substantial latency for long sequence inputs. There have been some recent efforts to accelerate VGGT, but they primarily focus on reducing <em>token redundancy</em> through token merging or key/value sparsification. Our work resolves this bottleneck from a different perspective by investigating <em>architectural redundancy</em> in visual geometry transformers.</p>
@@ -75,7 +75,7 @@
       </div>
     </section>
     <section class="section takeaways-section" id="key-takeaways" aria-labelledby="takeaways-title">
-      <div class="container reading-container">
+      <div class="container is-max-desktop content-container">
         <h2 class="section-title" id="takeaways-title">Key Takeaways</h2>
         <ul class="takeaways-grid">
           <li class="takeaway"><p><strong>A new axis of efficiency.</strong><br>Address architectural redundancy by adapting the computation of individual attention heads.</p></li>
@@ -87,7 +87,7 @@
     </section>
 
     <section class="section research-section" id="architectural-redundancy" aria-labelledby="redundancy-title">
-      <div class="container page-container">
+      <div class="container is-max-desktop content-container">
         <h2 class="section-title" id="redundancy-title">Architectural Redundancy</h2>
         <div class="prose">
           <p>VGGT’s global-attention modules contain <strong>384 heads across 24 layers</strong>. Their contributions to geometry are far from uniform: a small subset carries the most important information. This creates an opportunity to allocate computation according to each head’s role.</p>
@@ -127,7 +127,7 @@
     </section>
 
     <section class="section research-section" id="results" aria-labelledby="results-title">
-      <div class="container page-container">
+      <div class="container is-max-desktop content-container">
         <h2 class="section-title" id="results-title">Reconstruction Quality and Efficiency</h2>
         <div class="prose">
           <p>VGGT-Prime maintains <strong>competitive reconstruction quality</strong> while reducing inference time. On ScanNet with 500 frames, it reduces runtime from 90.1 s to 19.2 s with comparable Chamfer Distance. On dense 7-Scenes, it matches VGGT’s reported CD; on ETH3D, it achieves the best CD among these methods.</p>
@@ -220,7 +220,7 @@
     </section>
 
     <section class="section research-section" id="backbones-and-scaling" aria-labelledby="scaling-title">
-      <div class="container page-container">
+      <div class="container is-max-desktop content-container">
         <h2 class="section-title" id="scaling-title">Backbones and Scaling with Token Merging</h2>
         <div class="prose">
           <h3 class="subsection-title" id="backbones-title">Across visual geometry backbones</h3>
@@ -261,7 +261,7 @@
     </section>
   </main>
   <footer class="page-footer">
-    <div class="container prose-container">
+    <div class="container is-max-desktop content-container">
       <p>Built with the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template">Academic Project Page Template</a>, adapted from <a href="https://nerfies.github.io/">Nerfies</a>.</p>
       <p>Website template licensed under <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.</p>
     </div>
