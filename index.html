@@ -3,518 +3,268 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-  <!-- Primary Meta Tags -->
-  <!-- TODO: Replace with your paper title and author names -->
-  <meta name="title" content="PAPER_TITLE - AUTHOR_NAMES">
-  <!-- TODO: Write a compelling 150-160 character description of your research -->
-  <meta name="description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Add 5-10 relevant keywords for your research area -->
-  <meta name="keywords" content="KEYWORD1, KEYWORD2, KEYWORD3, machine learning, computer vision, AI">
-  <!-- TODO: List all authors -->
-  <meta name="author" content="FIRST_AUTHOR_NAME, SECOND_AUTHOR_NAME">
-  <meta name="robots" content="index, follow">
-  <meta name="language" content="English">
-  
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="article">
-  <!-- TODO: Replace with your institution or lab name -->
-  <meta property="og:site_name" content="INSTITUTION_OR_LAB_NAME">
-  <!-- TODO: Same as paper title above -->
-  <meta property="og:title" content="PAPER_TITLE">
-  <!-- TODO: Same as description above -->
-  <meta property="og:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Replace with your actual website URL -->
-  <meta property="og:url" content="https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE">
-  <!-- TODO: Create a 1200x630px preview image and update path -->
-  <meta property="og:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="PAPER_TITLE - Research Preview">
-  <meta property="article:published_time" content="2024-01-01T00:00:00.000Z">
-  <meta property="article:author" content="FIRST_AUTHOR_NAME">
-  <meta property="article:section" content="Research">
-  <meta property="article:tag" content="KEYWORD1">
-  <meta property="article:tag" content="KEYWORD2">
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <!-- TODO: Replace with your lab/institution Twitter handle -->
-  <meta name="twitter:site" content="@YOUR_TWITTER_HANDLE">
-  <!-- TODO: Replace with first author's Twitter handle -->
-  <meta name="twitter:creator" content="@AUTHOR_TWITTER_HANDLE">
-  <!-- TODO: Same as paper title above -->
-  <meta name="twitter:title" content="PAPER_TITLE">
-  <!-- TODO: Same as description above -->
-  <meta name="twitter:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Same as social preview image above -->
-  <meta name="twitter:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
-  <meta name="twitter:image:alt" content="PAPER_TITLE - Research Preview">
-
-  <!-- Academic/Research Specific -->
-  <meta name="citation_title" content="PAPER_TITLE">
-  <meta name="citation_author" content="FIRST_AUTHOR_LAST, FIRST_AUTHOR_FIRST">
-  <meta name="citation_author" content="SECOND_AUTHOR_LAST, SECOND_AUTHOR_FIRST">
-  <meta name="citation_publication_date" content="2024">
-  <meta name="citation_conference_title" content="CONFERENCE_NAME">
-  <meta name="citation_pdf_url" content="https://YOUR_DOMAIN.com/static/pdfs/paper.pdf">
-  
-  <!-- Additional SEO -->
-  <meta name="theme-color" content="#2563eb">
-  <meta name="msapplication-TileColor" content="#2563eb">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  
-  <!-- Preconnect for performance -->
+  <title>VGGT-Prime: Compute-Adaptive Mixture-of-Heads for Efficient Visual Geometry Transformers</title>
+  <meta name="description" content="VGGT-Prime accelerates visual geometry transformers through compute-adaptive attention heads: up to 8× faster inference, and 13.8× with token merging.">
+  <meta name="author" content="Abteen Arab, Guile Wu, Chengjie Huang, Dongfeng Bai">
+  <meta name="theme-color" content="#91416d">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="VGGT-Prime: Compute-Adaptive Mixture-of-Heads">
+  <meta property="og:description" content="Efficient visual geometry through architectural redundancy. Up to 8× faster inference, complementary to token merging.">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="VGGT-Prime">
+  <meta name="twitter:description" content="Compute-adaptive mixture-of-heads for efficient visual geometry transformers.">
+  <meta name="citation_title" content="VGGT-Prime: Compute-Adaptive Mixture-of-Heads for Efficient Visual Geometry Transformers">
+  <meta name="citation_author" content="Arab, Abteen">
+  <meta name="citation_author" content="Wu, Guile">
+  <meta name="citation_author" content="Huang, Chengjie">
+  <meta name="citation_author" content="Bai, Dongfeng">
+  <link rel="icon" href="static/images/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://ajax.googleapis.com">
-  <link rel="preconnect" href="https://documentcloud.adobe.com">
-  <link rel="preconnect" href="https://cdn.jsdelivr.net">
-
-
-  <!-- TODO: Replace with your paper title and authors -->
-  <title>PAPER_TITLE - AUTHOR_NAMES | Academic Research</title>
-  
-  <!-- Favicon and App Icons -->
-  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
-  <link rel="apple-touch-icon" href="static/images/favicon.ico">
-  
-  <!-- Critical CSS - Load synchronously -->
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans:400,500,700%7CNoto+Sans:400,500,600,700&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="static/css/bulma.min.css">
   <link rel="stylesheet" href="static/css/index.css">
-  
-  <!-- Non-critical CSS - Load asynchronously -->
-  <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="static/css/bulma-slider.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="static/css/fontawesome.all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  
-  <!-- Fallback for browsers that don't support preload -->
-  <noscript>
-    <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
-    <link rel="stylesheet" href="static/css/bulma-slider.min.css">
-    <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  </noscript>
-  
-  <!-- Fonts - Optimized loading -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  
-  <!-- Defer non-critical JavaScript -->
-  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script defer src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
-  <script defer src="static/js/fontawesome.all.min.js"></script>
-  <script defer src="static/js/bulma-carousel.min.js"></script>
-  <script defer src="static/js/bulma-slider.min.js"></script>
-  <script defer src="static/js/index.js"></script>
-  
-  <!-- Structured Data for Academic Papers -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ScholarlyArticle",
-    "headline": "PAPER_TITLE",
-    "description": "BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS",
-    "author": [
-      {
-        "@type": "Person",
-        "name": "FIRST_AUTHOR_NAME",
-        "affiliation": {
-          "@type": "Organization",
-          "name": "INSTITUTION_NAME"
-        }
-      },
-      {
-        "@type": "Person",
-        "name": "SECOND_AUTHOR_NAME",
-        "affiliation": {
-          "@type": "Organization",
-          "name": "INSTITUTION_NAME"
-        }
-      }
-    ],
-    "datePublished": "2024-01-01",
-    "publisher": {
-      "@type": "Organization",
-      "name": "CONFERENCE_OR_JOURNAL_NAME"
-    },
-    "url": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE",
-    "image": "https://YOUR_DOMAIN.com/static/images/social_preview.png",
-    "keywords": ["KEYWORD1", "KEYWORD2", "KEYWORD3", "machine learning", "computer vision"],
-    "abstract": "FULL_ABSTRACT_TEXT_HERE",
-    "citation": "BIBTEX_CITATION_HERE",
-    "isAccessibleForFree": true,
-    "license": "https://creativecommons.org/licenses/by/4.0/",
-    "mainEntity": {
-      "@type": "WebPage",
-      "@id": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE"
-    },
-    "about": [
-      {
-        "@type": "Thing",
-        "name": "RESEARCH_AREA_1"
-      },
-      {
-        "@type": "Thing", 
-        "name": "RESEARCH_AREA_2"
-      }
-    ]
-  }
-  </script>
-  
-  <!-- Website/Organization Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "INSTITUTION_OR_LAB_NAME",
-    "url": "https://YOUR_INSTITUTION_WEBSITE.com",
-    "logo": "https://YOUR_DOMAIN.com/static/images/favicon.ico",
-    "sameAs": [
-      "https://twitter.com/YOUR_TWITTER_HANDLE",
-      "https://github.com/YOUR_GITHUB_USERNAME"
-    ]
-  }
-  </script>
 </head>
 <body>
-
-
-  <!-- Scroll to Top Button -->
-  <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
-    <i class="fas fa-chevron-up"></i>
-  </button>
-
-  <!-- More Works Dropdown -->
-  <div class="more-works-container">
-    <button class="more-works-btn" onclick="toggleMoreWorks()" title="View More Works from Our Lab">
-      <i class="fas fa-flask"></i>
-      More Works
-      <i class="fas fa-chevron-down dropdown-arrow"></i>
-    </button>
-    <div class="more-works-dropdown" id="moreWorksDropdown">
-      <div class="dropdown-header">
-        <h4>More Works from Our Lab</h4>
-        <button class="close-btn" onclick="toggleMoreWorks()">
-          <i class="fas fa-times"></i>
-        </button>
-      </div>
-      <div class="works-list">
-        <!-- TODO: Replace with your lab's related works -->
-        <a href="https://arxiv.org/abs/PAPER_ID_1" class="work-item" target="_blank">
-          <div class="work-info">
-            <!-- TODO: Replace with actual paper title -->
-            <h5>Paper Title 1</h5>
-            <!-- TODO: Replace with brief description -->
-            <p>Brief description of the work and its main contribution.</p>
-            <!-- TODO: Replace with venue and year -->
-            <span class="work-venue">Conference/Journal 2024</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-        <!-- TODO: Add more related works or remove extra items -->
-        <a href="https://arxiv.org/abs/PAPER_ID_2" class="work-item" target="_blank">
-          <div class="work-info">
-            <h5>Paper Title 2</h5>
-            <p>Brief description of the work and its main contribution.</p>
-            <span class="work-venue">Conference/Journal 2023</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-        <a href="https://arxiv.org/abs/PAPER_ID_3" class="work-item" target="_blank">
-          <div class="work-info">
-            <h5>Paper Title 3</h5>
-            <p>Brief description of the work and its main contribution.</p>
-            <span class="work-venue">Conference/Journal 2023</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="hero publication-header">
+    <div class="hero-body">
+      <div class="container header-container has-text-centered">
+        <h1 class="publication-title">VGGT-<span>Prime</span></h1>
+        <p class="publication-subtitle">Compute-Adaptive Mixture-of-Heads<br class="desktop-break"> for Efficient Visual Geometry Transformers</p>
+        <p class="publication-authors">
+          <span class="author-block">Abteen Arab<sup>1,2,*</sup></span>
+          <span class="author-block">Guile Wu<sup>1</sup></span>
+          <span class="author-block">Chengjie Huang<sup>1</sup></span>
+          <span class="author-block">Dongfeng Bai<sup>1</sup></span>
+        </p>
+        <p class="publication-affiliations"><span><sup>1</sup>Huawei Noah’s Ark Lab</span><span><sup>2</sup>University of British Columbia</span></p>
+        <p class="contribution-note"><sup>*</sup>Abteen Arab contributed to this work during an internship at Huawei Canada.</p>
+        <div class="publication-links" aria-label="Project resources">
+          <button class="button is-rounded resource-button" type="button" disabled aria-disabled="true">
+            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M6 3h8l4 4v14H6zM14 3v5h4M9 12h6M9 16h6"/></svg>
+            <span>Paper <span class="resource-status">— Coming soon</span></span>
+          </button>
+          <button class="button is-rounded resource-button" type="button" disabled aria-disabled="true">
+            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m7 7-5 5 5 5m10-10 5 5-5 5M14 4l-4 16"/></svg>
+            <span>Code <span class="resource-status">— Coming soon</span></span>
+          </button>
+        </div>
       </div>
     </div>
-  </div>
-
+  </header>
   <main id="main-content">
-  <section class="hero">
-    <div class="hero-body">
-      <div class="container is-max-desktop">
-        <div class="columns is-centered">
-          <div class="column has-text-centered">
-            <!-- TODO: Replace with your paper title -->
-            <h1 class="title is-1 publication-title">Academic Project Page</h1>
-            <div class="is-size-5 publication-authors">
-              <!-- TODO: Replace with your paper authors and their personal links -->
-              <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
-                <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
-                  <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
-                  </span>
-                  </div>
+    <section class="section teaser-section" aria-label="VGGT-Prime overview">
+      <div class="container page-container">
+        <figure class="paper-figure main-figure">
+          <a class="figure-link" href="static/images/main-figure.png" target="_blank" rel="noopener" aria-label="Open the overview figure at full resolution in a new tab">
+            <img src="static/images/main-figure.png" width="3818" height="1720" fetchpriority="high" alt="VGGT-Prime reconstructs a resampled 1,000-image Mount Rushmore sequence in 45.2 seconds. Charts compare ScanNet-500 Chamfer Distance versus runtime and inference scaling from 100 to 1,000 frames.">
+          </a>
+          <figcaption><strong>Efficient geometry, from attention heads to long sequences.</strong> VGGT-Prime reconstructs a 1,000-view sequence formed by resampling the Mount Rushmore photo-tourism image set (left). The charts show point-cloud quality versus runtime on ScanNet-500 (top right) and inference scaling with and without token merging (bottom right).</figcaption>
+        </figure>
+      </div>
+    </section>
+    <section class="section" id="abstract" aria-labelledby="abstract-title">
+      <div class="container prose-container">
+        <h2 class="section-title" id="abstract-title">Abstract</h2>
+        <div class="abstract-text">
+          <p>Feed-forward visual geometry models such as the Visual Geometry Grounded Transformer (VGGT) have recently enabled direct 3D reconstruction from multi-view images. Despite their promising performance, these models scale quadratically with the number of input views due to their global attention mechanism, resulting in substantial latency for long sequence inputs. There have been some recent efforts to accelerate VGGT, but they primarily focus on reducing <em>token redundancy</em> through token merging or key/value sparsification. Our work resolves this bottleneck from a different perspective by investigating <em>architectural redundancy</em> in visual geometry transformers.</p>
+          <p>We show that the multi-head attention modules in VGGT’s global-attention layers contain substantial architectural redundancy, with only a subset of heads carrying critical geometric information. In light of this observation, we propose VGGT-Prime, a compute-adaptive mixture-of-heads model that resolves this redundancy to accelerate visual geometry transformers while maintaining competitive reconstruction quality. The key idea of VGGT-Prime is to estimate the appropriate computation level for each global-attention head using a lightweight router and then dynamically assign each head to different computation modes, including mean pooling approximation, linear complexity surrogate attention, or exact softmax attention.</p>
+          <p>Extensive experiments on multiple datasets demonstrate that VGGT-Prime can achieve an 8× inference speedup over VGGT while maintaining competitive performance on camera pose, depth, and point-cloud predictions. We further show that VGGT-Prime is complementary to existing acceleration methods, such as token merging, further improving inference speed by up to 14× over VGGT.</p>
+        </div>
+      </div>
+    </section>
+    <section class="section takeaways-section" id="key-takeaways" aria-labelledby="takeaways-title">
+      <div class="container reading-container">
+        <h2 class="section-title" id="takeaways-title">Key Takeaways</h2>
+        <ul class="takeaways-grid">
+          <li class="takeaway"><p><strong>A new axis of efficiency.</strong><br>Address architectural redundancy by adapting the computation of individual attention heads.</p></li>
+          <li class="takeaway"><p><strong>The right computation for each head.</strong><br>A lightweight router selects mean pooling, learned surrogate attention, or exact attention.</p></li>
+          <li class="takeaway"><p><strong>Up to <span class="accent">8×</span> faster inference.</strong><br>Scale to 1,000-frame inputs while maintaining competitive reconstruction quality.</p></li>
+          <li class="takeaway"><p><strong>Complementary to token merging.</strong><br>Combine both approaches for up to <span class="accent">13.8×</span> speedup in the scaling experiment.</p></li>
+        </ul>
+      </div>
+    </section>
 
-                  <div class="is-size-5 publication-authors">
-                    <!-- TODO: Replace with your institution and conference/journal info -->
-                    <span class="author-block">Institution Name<br>Conference name and year</span>
-                    <!-- TODO: Remove this line if no equal contribution -->
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
-                  </div>
+    <section class="section research-section" id="architectural-redundancy" aria-labelledby="redundancy-title">
+      <div class="container page-container">
+        <h2 class="section-title" id="redundancy-title">Architectural Redundancy</h2>
+        <div class="prose">
+          <p>VGGT’s global-attention modules contain <strong>384 heads across 24 layers</strong>. Their contributions to geometry are far from uniform: a small subset carries the most important information. This creates an opportunity to allocate computation according to each head’s role.</p>
+        </div>
+        <figure class="paper-figure">
+          <a class="figure-link" href="static/images/head-saliency.png" target="_blank" rel="noopener" aria-label="Open the head-saliency analysis at full resolution in a new tab">
+            <img src="static/images/head-saliency.png" width="3010" height="742" loading="lazy" decoding="async" alt="Integrated-gradient and maximum-attention heatmaps show sparse saliency across 24 layers and 16 heads. Saliency-guided head retention outperforms random selection, and the two importance rankings are strongly correlated.">
+          </a>
+          <figcaption><strong>Attention heads have different importance.</strong> Both saliency measures reveal sparse, heterogeneous patterns (left). Retaining heads according to saliency preserves pose performance better than random selection (center; Top-K heads kept). The rankings agree strongly, with Spearman ρ = 0.741 (right).</figcaption>
+        </figure>
+        <div class="prose">
+          <h3 class="subsection-title">Different heads, different attention patterns</h3>
+          <p>High-saliency heads produce focused, query-dependent attention. Medium-saliency heads share selective patterns across queries, while low-saliency heads distribute attention almost uniformly. These patterns motivate three levels of computation.</p>
+        </div>
+        <figure class="paper-figure">
+          <a class="figure-link" href="static/images/attention-patterns.png" target="_blank" rel="noopener" aria-label="Open the attention-pattern analysis at full resolution in a new tab">
+            <img src="static/images/attention-patterns.png" width="2996" height="688" loading="lazy" decoding="async" alt="Attention maps from high-, medium-, and low-saliency heads become progressively more diffuse. Across 384 ranked heads, attention entropy increases and query diversity decreases as saliency falls.">
+          </a>
+          <figcaption><strong>Saliency reveals a computational hierarchy.</strong> The example maps use within-layer ranks 1, 8, and 16 in layer 15, with five queries attending to the first view (left). The entropy and query-diversity plots rank all 384 global-attention heads (center and right).</figcaption>
+        </figure>
+        <div class="prose">
+          <h3 class="subsection-title">Compute-adaptive mixture-of-heads</h3>
+          <p>A lightweight, input-dependent router estimates head saliency and selects the appropriate computation mode for each global-attention head:</p>
+          <ol class="mode-list">
+            <li><strong>Mean pooling</strong> approximates diffuse, low-saliency attention.</li>
+            <li><strong>Learned surrogate attention</strong> approximates selective, largely shared attention with linear complexity. A pooled context and a token-dependent residual correction preserve useful variation.</li>
+            <li><strong>Exact softmax attention</strong> preserves the focused, query-dependent interactions of highly salient heads.</li>
+          </ol>
+        </div>
+        <figure class="paper-figure">
+          <a class="figure-link" href="static/images/architecture.png" target="_blank" rel="noopener" aria-label="Open the VGGT-Prime architecture at full resolution in a new tab">
+            <img src="static/images/architecture.png" width="3024" height="1256" loading="lazy" decoding="async" alt="VGGT-Prime replaces global attention with a routed mixture of full attention, surrogate attention, and mean pooling. Detail panels show the saliency router and the surrogate’s pooled context and token-wise residual correction.">
+          </a>
+          <figcaption><strong>Spend computation where geometry needs it.</strong> Prime adapts the computation of global-attention heads while retaining the surrounding VGGT pipeline. With the selected routing thresholds, more than 90% of heads use the cheaper mean-pooling or surrogate paths. Token merging can be applied alongside this mechanism.</figcaption>
+        </figure>
+      </div>
+    </section>
 
-                  <div class="column has-text-centered">
-                    <div class="publication-links">
-                         <!-- TODO: Update with your arXiv paper ID -->
-                      <span class="link-block">
-                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
-                        class="external-link button is-normal is-rounded is-dark">
-                        <span class="icon">
-                          <i class="fas fa-file-pdf"></i>
-                        </span>
-                        <span>Paper</span>
-                      </a>
-                    </span>
-
-                    <!-- TODO: Add your supplementary material PDF or remove this section -->
-                    <span class="link-block">
-                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>Supplementary</span>
-                    </a>
-                  </span>
-
-                  <!-- TODO: Replace with your GitHub repository URL -->
-                  <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
-                    <span>Code</span>
-                  </a>
-                </span>
-
-                <!-- TODO: Update with your arXiv paper ID -->
-                <span class="link-block">
-                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
+    <section class="section research-section" id="results" aria-labelledby="results-title">
+      <div class="container page-container">
+        <h2 class="section-title" id="results-title">Reconstruction Quality and Efficiency</h2>
+        <div class="prose">
+          <p>VGGT-Prime maintains <strong>competitive reconstruction quality</strong> while reducing inference time. On ScanNet with 500 frames, it reduces runtime from 90.1 s to 19.2 s with comparable Chamfer Distance. On dense 7-Scenes, it matches VGGT’s reported CD; on ETH3D, it achieves the best CD among these methods.</p>
+        </div>
+        <div class="results-grid">
+          <div class="benchmark">
+            <h3 class="benchmark-title" id="7-scenes-sparse-title">7-Scenes Sparse</h3>
+            <div class="table-scroll" role="region" tabindex="0" aria-labelledby="7-scenes-sparse-title">
+              <table class="data-table" aria-labelledby="7-scenes-sparse-title" aria-describedby="results-note">
+                <thead><tr><th scope="col">Method</th><th scope="col">CD ↓</th><th scope="col">Time (s) ↓</th><th scope="col">Speedup ↑</th></tr></thead>
+                <tbody>
+                <tr><th scope="row">VGGT</th><td>0.118</td><td>4.5</td><td>1.00×</td></tr>
+                <tr><th scope="row">FastVGGT</th><td>0.109</td><td>2.7</td><td>1.67×</td></tr>
+                <tr><th scope="row">SparseVGGT</th><td>0.134</td><td>2.6</td><td>1.73×</td></tr>
+                <tr><th scope="row">HTTM</th><td>0.121</td><td>3.8</td><td>1.18×</td></tr>
+                <tr><th scope="row">HeSS</th><td>0.126</td><td>2.8</td><td>1.61×</td></tr>
+                <tr class="ours"><th scope="row">VGGT-Prime</th><td>0.121</td><td><strong>1.9</strong></td><td>2.37×</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="benchmark">
+            <h3 class="benchmark-title" id="7-scenes-dense-title">7-Scenes Dense</h3>
+            <div class="table-scroll" role="region" tabindex="0" aria-labelledby="7-scenes-dense-title">
+              <table class="data-table" aria-labelledby="7-scenes-dense-title" aria-describedby="results-note">
+                <thead><tr><th scope="col">Method</th><th scope="col">CD ↓</th><th scope="col">Time (s) ↓</th><th scope="col">Speedup ↑</th></tr></thead>
+                <tbody>
+                <tr><th scope="row">VGGT</th><td>0.115</td><td>38.1</td><td>1.00×</td></tr>
+                <tr><th scope="row">FastVGGT</th><td>0.115</td><td>14.2</td><td>2.68×</td></tr>
+                <tr><th scope="row">SparseVGGT</th><td>0.139</td><td>16.2</td><td>2.35×</td></tr>
+                <tr><th scope="row">HTTM</th><td>0.117</td><td>12.1</td><td>3.15×</td></tr>
+                <tr><th scope="row">HeSS</th><td>0.168</td><td>18.4</td><td>2.07×</td></tr>
+                <tr class="ours"><th scope="row">VGGT-Prime</th><td>0.115</td><td><strong>9.8</strong></td><td>3.89×</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="benchmark">
+            <h3 class="benchmark-title" id="scannet-100-title">ScanNet 100</h3>
+            <div class="table-scroll" role="region" tabindex="0" aria-labelledby="scannet-100-title">
+              <table class="data-table" aria-labelledby="scannet-100-title" aria-describedby="results-note">
+                <thead><tr><th scope="col">Method</th><th scope="col">CD ↓</th><th scope="col">Time (s) ↓</th><th scope="col">Speedup ↑</th></tr></thead>
+                <tbody>
+                <tr><th scope="row">VGGT</th><td>0.421</td><td>4.9</td><td>1.00×</td></tr>
+                <tr><th scope="row">FastVGGT</th><td>0.416</td><td>2.8</td><td>1.75×</td></tr>
+                <tr><th scope="row">SparseVGGT</th><td>0.425</td><td>2.6</td><td>1.88×</td></tr>
+                <tr><th scope="row">HTTM</th><td>0.420</td><td>4.0</td><td>1.23×</td></tr>
+                <tr><th scope="row">HeSS</th><td>0.418</td><td>2.9</td><td>1.69×</td></tr>
+                <tr class="ours"><th scope="row">VGGT-Prime</th><td>0.422</td><td><strong>2.0</strong></td><td>2.45×</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="benchmark">
+            <h3 class="benchmark-title" id="scannet-500-title">ScanNet 500</h3>
+            <div class="table-scroll" role="region" tabindex="0" aria-labelledby="scannet-500-title">
+              <table class="data-table" aria-labelledby="scannet-500-title" aria-describedby="results-note">
+                <thead><tr><th scope="col">Method</th><th scope="col">CD ↓</th><th scope="col">Time (s) ↓</th><th scope="col">Speedup ↑</th></tr></thead>
+                <tbody>
+                <tr><th scope="row">VGGT</th><td>0.442</td><td>90.1</td><td>1.00×</td></tr>
+                <tr><th scope="row">FastVGGT</th><td>0.437</td><td>28.4</td><td>3.17×</td></tr>
+                <tr><th scope="row">SparseVGGT</th><td>0.441</td><td>34.2</td><td>2.63×</td></tr>
+                <tr><th scope="row">HTTM</th><td>0.433</td><td>22.8</td><td>3.95×</td></tr>
+                <tr><th scope="row">HeSS</th><td>0.435</td><td>37.4</td><td>2.41×</td></tr>
+                <tr class="ours"><th scope="row">VGGT-Prime</th><td>0.441</td><td><strong>19.2</strong></td><td>4.69×</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="benchmark">
+            <h3 class="benchmark-title" id="eth3d-title">ETH3D</h3>
+            <div class="table-scroll" role="region" tabindex="0" aria-labelledby="eth3d-title">
+              <table class="data-table" aria-labelledby="eth3d-title" aria-describedby="results-note">
+                <thead><tr><th scope="col">Method</th><th scope="col">CD ↓</th><th scope="col">Time (s) ↓</th><th scope="col">Speedup ↑</th></tr></thead>
+                <tbody>
+                <tr><th scope="row">VGGT</th><td>1.07</td><td>0.39</td><td>1.00×</td></tr>
+                <tr><th scope="row">FastVGGT</th><td>1.24</td><td>0.42</td><td>0.93×</td></tr>
+                <tr><th scope="row">SparseVGGT</th><td>1.89</td><td>0.51</td><td>0.76×</td></tr>
+                <tr><th scope="row">HTTM</th><td>1.41</td><td>0.73</td><td>0.53×</td></tr>
+                <tr><th scope="row">HeSS</th><td>1.67</td><td>0.57</td><td>0.68×</td></tr>
+                <tr class="ours"><th scope="row">VGGT-Prime</th><td>0.99</td><td><strong>0.38</strong></td><td>1.03×</td></tr>
+                </tbody>
+              </table>
             </div>
           </div>
         </div>
+        <p class="table-note" id="results-note"><strong>Reading the tables.</strong> Summed Chamfer Distance (CD ↓); lower is better. Speedup is VGGT runtime divided by each method’s runtime, calculated from the reported values and rounded to two decimals. Bold denotes the lowest runtime within each dataset, including ties; plum shading identifies VGGT-Prime.</p>
+        <p class="table-note"><strong>Evaluation.</strong> Timings measure synchronized full-model inference, including the encoder, aggregator, and prediction heads, using the median after three warmup iterations. All methods use the same hardware and input resolution, BF16, and batch size 1. The VGGT baseline uses the accelerated implementation introduced by MapAnything. HTTM and HeSS are PyTorch reimplementations.</p>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-
-<!-- Teaser video-->
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <!-- TODO: Replace with your teaser video -->
-      <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata">
-        <!-- TODO: Add your video file path here -->
-        <source src="static/videos/banner_video.mp4" type="video/mp4">
-      </video>
-      <!-- TODO: Replace with your video description -->
-      <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
-      </h2>
-    </div>
-  </div>
-</section>
-<!-- End teaser video -->
-
-<!-- Paper abstract -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <!-- TODO: Replace with your paper abstract -->
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
-          </p>
+    <section class="section research-section" id="backbones-and-scaling" aria-labelledby="scaling-title">
+      <div class="container page-container">
+        <h2 class="section-title" id="scaling-title">Backbones and Scaling with Token Merging</h2>
+        <div class="prose">
+          <h3 class="subsection-title" id="backbones-title">Across visual geometry backbones</h3>
+          <p>Prime also applies to VGGT-Ω, π³, and Depth Anything 3 (DA3). On <strong>sparse 7-Scenes</strong>, the Prime variants preserve the reported CD while providing approximately 2× faster inference.</p>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End paper abstract -->
-
-
-<!-- Image carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- TODO: Replace with your research result images -->
-        <img src="static/images/carousel1.jpg" alt="First research result visualization" loading="lazy"/>
-        <!-- TODO: Replace with description of this result -->
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="Second research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="Third research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="Fourth research result visualization" loading="lazy"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
-    </div>
-  </div>
-</div>
-</div>
-</section>
-<!-- End image carousel -->
-
-
-
-
-<!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- TODO: Replace with your YouTube video ID -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <div class="backbone-table-wrap">
+          <div class="table-scroll" role="region" tabindex="0" aria-labelledby="backbones-title">
+            <table class="data-table backbone-table" aria-labelledby="backbones-title" aria-describedby="backbones-note">
+              <thead>
+                <tr><th scope="col" rowspan="2">Backbone</th><th scope="colgroup" colspan="2">CD ↓</th><th scope="colgroup" colspan="2">Time (s) ↓</th><th scope="col" rowspan="2">Speedup ↑</th></tr>
+                <tr><th scope="col">Baseline</th><th scope="col" class="prime-value">+ Prime</th><th scope="col">Baseline</th><th scope="col" class="prime-value">+ Prime</th></tr>
+              </thead>
+              <tbody>
+                <tr><th scope="row">VGGT-Ω</th><td>0.10</td><td class="prime-value">0.10</td><td>2.9</td><td class="prime-value">1.6</td><td>1.81×</td></tr>
+                <tr><th scope="row">π³</th><td>0.11</td><td class="prime-value">0.11</td><td>3.3</td><td class="prime-value">1.5</td><td>2.20×</td></tr>
+                <tr><th scope="row">DA3</th><td>0.10</td><td class="prime-value">0.10</td><td>3.5</td><td class="prime-value">1.5</td><td>2.33×</td></tr>
+              </tbody>
+            </table>
           </div>
+          <p class="table-note" id="backbones-note">Sparse 7-Scenes evaluation. Speedup is relative to each original backbone, calculated from the reported runtimes. The teaser’s backbone plot reports a separate ScanNet-500 evaluation.</p>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End youtube video -->
-
-
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video1" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4" type="video/mp4">
-          </video>
+        <div class="prose scaling-copy">
+          <h3 class="subsection-title">Architectural efficiency meets token efficiency</h3>
+          <p>Prime adapts <em>how attention heads compute</em>; token merging reduces token redundancy. Combining the two improves long-sequence scaling further. At 1,000 frames, the reported speedup over VGGT rises from <strong>8.0×</strong> for Prime to <strong>11.2×</strong> and <strong>13.8×</strong> with 75% and 90% token-merging ratios, respectively.</p>
         </div>
-        <div class="item item-video2">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video2" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video3" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4" type="video/mp4">
-          </video>
-        </div>
+        <dl class="scaling-highlights" aria-label="Speedup over VGGT at 1,000 frames">
+          <div><dt>VGGT-Prime</dt><dd>8.0×</dd></div>
+          <div><dt>Prime + ToMe, 75%</dt><dd>11.2×</dd></div>
+          <div><dt>Prime + ToMe, 90%</dt><dd>13.8×</dd></div>
+        </dl>
+        <figure class="paper-figure">
+          <a class="figure-link" href="static/images/token-merging.png" target="_blank" rel="noopener" aria-label="Open the token-merging scaling figure at full resolution in a new tab">
+            <img src="static/images/token-merging.png" width="3600" height="1800" loading="lazy" decoding="async" alt="Full forward-pass runtime on ScanNet for 100, 300, 500, and 1,000 frames. At 1,000 frames, Prime is 8.0× faster than VGGT; adding 75% and 90% token merging yields 11.2× and 13.8× speedups.">
+          </a>
+          <figcaption><strong>Complementary gains as sequence length grows.</strong> Full forward-pass runtime across increasing view counts on ScanNet. All annotated speedups are relative to VGGT. ToMe labels indicate token-merging ratios; the 13.8× result is the nearly 14× speedup summarized in the abstract.</figcaption>
+        </figure>
       </div>
+    </section>
+  </main>
+  <footer class="page-footer">
+    <div class="container prose-container">
+      <p>Built with the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template">Academic Project Page Template</a>, adapted from <a href="https://nerfies.github.io/">Nerfies</a>.</p>
+      <p>Website template licensed under <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.</p>
     </div>
-  </div>
-</section>
-<!-- End video carousel -->
-
-
-
-
-
-
-<!-- Paper poster -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <!-- TODO: Replace with your poster PDF -->
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
-      </div>
-    </div>
-  </section>
-<!--End paper poster -->
-
-
-
-<!--BibTex citation -->
-  <section class="section" id="BibTeX">
-    <div class="container is-max-desktop content">
-      <div class="bibtex-header">
-        <h2 class="title">BibTeX</h2>
-        <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
-          <i class="fas fa-copy"></i>
-          <span class="copy-text">Copy</span>
-        </button>
-      </div>
-      <pre id="bibtex-code"><code>@article{YourPaperKey2024,
-  title={Your Paper Title Here},
-  author={First Author and Second Author and Third Author},
-  journal={Conference/Journal Name},
-  year={2024},
-  url={https://your-domain.com/your-project-page}
-}</code></pre>
-    </div>
-</section>
-<!--End BibTex citation -->
-
-
-  <footer class="footer">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-
-          <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-
-        </div>
-      </div>
-    </div>
-  </div>
-</footer>
-
-<!-- Statcounter tracking code -->
-  
-<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
-
-    <!-- End of Statcounter Code -->
-
-  </body>
-  </html>
+  </footer>
+</body>
+</html>

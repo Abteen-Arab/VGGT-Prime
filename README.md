@@ -1,80 +1,45 @@
-# Academic Project Page Template
+# VGGT-Prime
 
-> **Update (September 2025)**: This template has been modernized with better design, SEO, and mobile support. For the original version, see the [original-version branch](https://github.com/eliahuhorwitz/Academic-project-page-template/tree/original-version).
+Local project page for **VGGT-Prime: Compute-Adaptive Mixture-of-Heads for Efficient Visual Geometry Transformers** by Abteen Arab, Guile Wu, Chengjie Huang, and Dongfeng Bai.
 
-A clean, responsive template for academic project pages.
+## Preview
 
+Open `index.html` directly, or run this command from this folder:
 
-Example project pages built using this template are:
-- https://horwitz.ai/probex
-- https://vision.huji.ac.il/probegen
-- https://horwitz.ai/mother
-- https://horwitz.ai/spectral_detuning
-- https://vision.huji.ac.il/ladeda
-- https://vision.huji.ac.il/dsire
-- https://horwitz.ai/podd
-- https://dreamix-video-editing.github.io
-- https://horwitz.ai/conffusion
-- https://horwitz.ai/3d_ads/
-- https://vision.huji.ac.il/ssrl_ad
-- https://vision.huji.ac.il/deepsim
+```sh
+python3 -m http.server 8000 --bind 127.0.0.1
+```
 
+Then visit <http://127.0.0.1:8000>. No installation or build step is needed. The page is static HTML and CSS, with local Bulma styles and optional Google Fonts. All figures and tables work without JavaScript or external services.
 
+This folder is ready for GitHub Pages; `.nojekyll` is retained and all local asset URLs are relative. Nothing has been published.
 
-## Start using the template
-To start using the template click on `Use this Template`.
+## Content and sources
 
-The template uses html for controlling the content and css for controlling the style. 
-To edit the websites contents edit the `index.html` file. It contains different HTML "building blocks", use whichever ones you need and comment out the rest.  
+The supplied `VGGT_Prime_arxiv__Execute_` manuscript is the source of the authors, affiliations, abstract, figures, and results.
 
-**IMPORTANT!** Make sure to replace the `favicon.ico` under `static/images/` with one of your own, otherwise your favicon is going to be a dreambooth image of me.
+- `index.html`: page content and accessible HTML tables.
+- `static/css/index.css`: responsive layout and plum theme, following the VGGT-Ω project page.
+- `static/images/`: five unchanged manuscript figures, renamed for web-friendly URLs, plus the page favicon.
 
-## What's New
+| Website figure | Manuscript source |
+| --- | --- |
+| `main-figure.png` | `Figures/Main_Figure.png` |
+| `head-saliency.png` | `Figures/Analysis_1.png` |
+| `attention-patterns.png` | `Figures/Analysis_2.png` |
+| `architecture.png` | `Figures/Model Architecture-2.png` |
+| `token-merging.png` | `Figures/ToMe Experiment.png` |
 
-- Modern, clean design with better mobile support
-- Improved SEO with proper meta tags and structured data
-- Performance improvements (lazy loading, optimized assets)
-- More Works dropdown
-- Copy button for BibTeX citations
-- Better accessibility
+Benchmark data comes from `Table/Point_Cloud_all.tex`; backbone data comes from `Table/Generalization.tex`. Speedups in the HTML tables are ratios of reported runtimes, rounded to two decimals. The scaling figure's annotated speedups retain their original one-decimal precision. The abstract preserves its original rounded “up to 14×” statement; the scaling section reports 13.8×.
 
-## Components
+CD is the only reconstruction-quality metric in the result tables. The saliency-analysis figure includes its original pose-performance ablation. The teaser's backbone plot is ScanNet-500, while the backbone table is sparse 7-Scenes.
 
-- Teaser video
-- Image carousel
-- YouTube video embedding
-- Video carousel
-- PDF poster viewer
-- BibTeX citation
+## Release links
 
-## Customization
+Paper and Code are intentionally disabled and labeled **Coming soon**. When release URLs are available, replace each disabled resource `<button>` with an `<a>` using the same classes and a verified `href`; remove `disabled`, `aria-disabled`, and the Coming soon status. No paper ID, venue, publication date, author homepage, or canonical project URL has been invented.
 
-The HTML file has TODO comments showing what to replace:
+## Attribution
 
-- Paper title, authors, institution, conference
-- Links (arXiv, GitHub, etc.)
-- Abstract and descriptions  
-- Videos, images, and PDFs
-- Related works in the dropdown
-- Meta tags for SEO and social sharing
+Built from the [Academic Project Page Template](https://github.com/eliahuhorwitz/Academic-project-page-template), adapted from [Nerfies](https://nerfies.github.io/). Visual direction follows [VGGT-Ω](https://vggt-omega.github.io/).
 
-### Meta Tags
-The template includes meta tags for better search engine visibility and social media sharing. These appear in the `<head>` section and help with:
-- Google Scholar indexing
-- Social media previews (Twitter, Facebook, LinkedIn)
-- Search engine optimization
-
-Create a 1200x630px social preview image at `static/images/social_preview.png`.
-
-## Tips
-
-- Compress images with [TinyPNG](https://tinypng.com)
-- Use YouTube for large videos (>10MB)  
-- Replace the favicon in `static/images/`
-- Works with GitHub Pages
-
-## Acknowledgments
-Parts of this project page were adopted from the [Nerfies](https://nerfies.github.io/) page.
-
-## Website License
-<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+The website template is licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). Manuscript figures remain supplied research assets.
